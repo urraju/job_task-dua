@@ -1,8 +1,9 @@
 import { CiSearch } from "react-icons/ci";
+import Setting from "./Setting/Setting";
 
 const HomeContent = () => {
   return (
-    <div className="max-w-screen-2xl mx-auto py-4 grid grid-cols-12 gap-6">
+    <div className="max-w-screen-2xl   mx-auto py-4 grid grid-cols-12 gap-6">
       {/* left content  */}
       <div className="col-span-3 border   rounded-md bg-white">
         <div className="bg-[#1FA45B] text-center rounded-t-md py-2 font-inter">
@@ -24,8 +25,11 @@ const HomeContent = () => {
 
       {/* center content  */}
 
-      <div className="col-span-6 border border-cyan-500 bg-white shadow-xl">
-        <p>
+      <div className="col-span-6 border     shadow-xl">
+        <div className="bg-white rounded-md p-2 mb-2">
+            <p className="text-lg "><span className="text-lg font-semibold font-inter text-[#1FA45B]">Section : </span>The servant is dependent on his Lord</p>
+        </div>
+        <p className="bg-white p-4 rounded-md">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe quas,
           odio perferendis fugit deserunt consequuntur commodi impedit natus
           fuga repellendus a quisquam vel deleniti, molestiae ab enim amet
@@ -36,24 +40,17 @@ const HomeContent = () => {
           temporibus, nostrum enim omnis eaque nesciunt, modi quibusdam
           laboriosam culpa labore! Hic quos quo exercitationem quod repellat id,
           ullam, cum praesentium sapiente aliquid, dolores at facere? Vero
-          dolorem perspiciatis eum similique, eaque magni, saepe rem sit ipsum
-          labore blanditiis esse praesentium laboriosam? Quaerat a sit ex! Quia
-          itaque facilis non impedit dolorum delectus reprehenderit quos,
-          laborum sapiente, libero labore doloremque laudantium. Quam numquam
-          consequuntur placeat soluta. Odit a autem assumenda delectus ducimus
-          suscipit, ipsam nulla exercitationem quidem ipsum voluptatum repellat
-          cupiditate saepe soluta voluptatibus officiis in optio fugiat eveniet
-          fugit possimus, voluptatem ad culpa pariatur! Exercitationem voluptas
-          eligendi mollitia cumque doloremque error, veniam nemo tempora dolore,
-          quos aut. Nemo, corrupti fuga inventore optio, facilis error soluta
-          hic, velit vel dignissimos ullam. Necessitatibus corporis aspernatur,
-          voluptatum ut cumque debitis assumenda veritatis sint iste iusto.
+        
         </p>
       </div>
 
       {/* right content  */}
 
-      <div className="col-span-3 border border-cyan-500 bg-white"></div>
+      <div className="col-span-3 border rounded-2xl  p-4 items-center bg-white">
+        <h1 className="font-inter font-bold text-center text-2xl py-4">Setting</h1>
+        <Setting/>
+      </div>
+
     </div>
   );
 };
