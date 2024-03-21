@@ -6,9 +6,9 @@ import logo from "/public/assets/duacard.png";
 const HomeContent = async ({ dataDua }) => {
   console.log(dataDua);
   return (
-    <div className="max-w-screen-2xl   mx-auto py-4 grid grid-cols-12 gap-6">
+    <div className="max-w-screen-2xl   mx-auto py-4 grid grid-cols-1 lg:grid-cols-12 gap-6">
       {/* left content  */}
-      <div className="col-span-3 border   rounded bg-white">
+      <div className="lg:col-span-3 col-span-12 border   rounded bg-white">
         <div className="bg-[#1FA45B] text-center rounded-t-md py-2 font-inter">
           <p className="text-lg text-white">Categories</p>
         </div>
@@ -27,7 +27,7 @@ const HomeContent = async ({ dataDua }) => {
           {dataDua.map((item) => (
             <p
               key={item._id}
-              className="border-l-2 border-green-500 border-dashed text-sm px-4 mb-3 "
+              className="border-l-2 border-green-500 border-dashed text-sm hover:font-medium hover:text-green-600 duration-200 px-4 mb-3 "
             >
               <a href={`#category_${item._id}`}>{item.category}</a>
             </p>
@@ -37,10 +37,8 @@ const HomeContent = async ({ dataDua }) => {
 
       {/* center content  */}
 
-      <div className="col-span-6 border h-[100vh] overflow-y-scroll scroll-smooth  shadow-xl">
-        <div className="bg-white rounded-md p-2 mb-2">
-          
-        </div>
+      <div className="lg:col-span-6 col-span-12 border h-[100vh] overflow-y-scroll scroll-smooth  shadow-xl">
+        <div className="bg-white rounded-md p-2 mb-2"></div>
 
         {dataDua.map((item, index) => (
           <div
@@ -60,25 +58,31 @@ const HomeContent = async ({ dataDua }) => {
               {item.description}
             </p>
             <p className="py-4 font-medium text-lg ">{item.category}</p>
-            
+
             <p className="text-right text-3xl font-light py-2">{item.arabic}</p>
-            <p className="py-2 font-inter italic font-medium"> <span>Transliteration : </span>{item.description}</p>
-            <p className="py-2   text-gray-500 font-light"><span className="text-black font-medium">Translation : </span>{item.translation}</p>
+            <p className="py-2 font-inter italic font-medium">
+              {" "}
+              <span>Transliteration : </span>
+              {item.description}
+            </p>
+            <p className="py-2   text-gray-500 font-light">
+              <span className="text-black font-medium">Translation : </span>
+              {item.translation}
+            </p>
             <p className="font-medium text-xl">
-              <span className="text-green-500 py-1 font-semibold font-inter text-lg block">Reference : </span>
+              <span className="text-green-500 py-1 font-semibold font-inter text-lg block">
+                Reference :{" "}
+              </span>
 
               {item.reference}
             </p>
-            
-          
-           
           </div>
         ))}
       </div>
 
       {/* right content  */}
 
-      <div className="col-span-3 border h-max rounded-2xl  p-4 items-center bg-white">
+      <div className="lg:col-span-3 col-span-12 border h-max rounded-2xl  p-4 items-center bg-white">
         <h1 className="font-inter font-bold text-center text-2xl py-4">
           Setting
         </h1>
