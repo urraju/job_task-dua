@@ -1,11 +1,12 @@
 import Home from "@/components/Home/Home";
- 
 
-export default function page() {
+ const   page = async () => {
+  const data = await fetch("http://localhost:5000/dua");
+  const dataDua = await data.json();
   return (
     <div>
-    
-      <Home />
+      <Home dataDua={dataDua}/>
     </div>
   );
 }
+export default page

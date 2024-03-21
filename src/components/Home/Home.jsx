@@ -1,12 +1,13 @@
 import HomeContent from "../HomeContent";
 import Navbar from "../Navbar";
 
-const Home = () => {
+const Home = ({dataDua}) => {
     return(
         <div>
               
               <Navbar/>
-              <HomeContent/>
+              <HomeContent dataDua={dataDua}/>
+              
              
         </div>
     )}
