@@ -39,12 +39,7 @@ const HomeContent = async ({ dataDua }) => {
 
       <div className="col-span-6 border h-[100vh] overflow-y-scroll scroll-smooth  shadow-xl">
         <div className="bg-white rounded-md p-2 mb-2">
-          <p className="text-lg ">
-            <span className="text-lg font-semibold font-inter text-[#1FA45B]">
-              Section :{" "}
-            </span>
-            The servant is dependent on his Lord
-          </p>
+          
         </div>
 
         {dataDua.map((item, index) => (
@@ -65,12 +60,18 @@ const HomeContent = async ({ dataDua }) => {
               {item.description}
             </p>
             <p className="py-4 font-medium text-lg ">{item.category}</p>
-            <p>
-              <span>Transliteration</span>
-              {item.transliteration}
+            
+            <p className="text-right text-3xl font-light py-2">{item.arabic}</p>
+            <p className="py-2 font-inter italic font-medium"> <span>Transliteration : </span>{item.description}</p>
+            <p className="py-2   text-gray-500 font-light"><span className="text-black font-medium">Translation : </span>{item.translation}</p>
+            <p className="font-medium text-xl">
+              <span className="text-green-500 py-1 font-semibold font-inter text-lg block">Reference : </span>
+
+              {item.reference}
             </p>
-            <p>{item.translation}</p>
-            <p>{item.reference}</p>
+            
+          
+           
           </div>
         ))}
       </div>
